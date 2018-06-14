@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--扫描service包(包含子包)下所有使用注解的类型-->
+    <context:component-scan base-package="com.service"/>
+    <bean name="dataSourceRmiService" class="com.service.LoginServiceImpl"/>
+    <bean name="dataSourcermi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="service" ref="dataSourceRmiService" />
+        <property name="serviceName" value="dataSourceRmiServiceTest" />
+        <property name="serviceInterface" value="com.service.LoginService"/>
+        <property name="registryPort" value="8089" />
+        <property name="servicePort" value="8094"/>
+
+    </bean>
+
+    <bean name="OSSRmiService" class="com.util.aliyunutil.OssUtil"/>
+    <bean name="OSSRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="service" ref="OSSRmiService" />
+        <property name="serviceName" value="OSSRmiServiceTest" />
+        <property name="serviceInterface" value="com.service.OssService"/>
+        <property name="registryPort" value="8090" />
+        <property name="servicePort" value="8095"/>
+
+    </bean>
+    <bean name="EmailRmiService" class="com.util.emailutil.EmailUtil"/>
+    <bean name="EmailRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="service" ref="EmailRmiService" />
+        <property name="serviceName" value="EmailRmiServiceTest" />
+        <property name="serviceInterface" value="com.service.EmailService"/>
+        <property name="registryPort" value="8091" />
+        <property name="servicePort" value="8096"/>
+
+    </bean>
+    <bean name="RedisRmiService" class="com.service.RedisCacheUtil"/>
+    <bean name="RedisRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="service" ref="RedisRmiService" />
+        <property name="serviceName" value="RedisRmiServiceTest" />
+        <property name="serviceInterface" value="com.service.RedisService"/>
+        <property name="registryPort" value="8092" />
+        <property name="servicePort" value="8097"/>
+
+    </bean>
+    <bean name="SMSRmiService" class="com.service.SMSServiceImpl"/>
+    <bean name="SMSRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="service" ref="SMSRmiService" />
+        <property name="serviceName" value="SMSRmiServiceTest" />
+        <property name="serviceInterface" value="com.service.SMSservice"/>
+        <property name="registryPort" value="8093" />
+        <property name="servicePort" value="8098"/>
+    </bean>
+
+</beans>

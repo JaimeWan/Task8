@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="clientRmiTest1" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8089/dataSourceRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.LoginService"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+
+    <bean id="clientRmiTest2" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8090/OSSRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.OssService"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+
+    <bean id="clientRmiTest3" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8091/EmailRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.EmailService"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+
+    <bean id="clientRmiTest4" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+    <property name="serviceUrl" value="rmi://192.168.31.176:8092/RedisRmiServiceTest"/>
+    <property name="serviceInterface" value="com.service.RedisService"/>
+    <property name="lookupStubOnStartup" value="false"/>
+    <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+
+    <bean id="clientRmiTest5" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8093/SMSRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.SMSservice"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+
+
+
+    <!--service2-->
+
+    <bean id="clientRmiTest12" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8094/dataSourceRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.LoginService"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+
+    <bean id="clientRmiTest22" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8095/OSSRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.OssService"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+
+    <bean id="clientRmiTest32" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8096/EmailRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.EmailService"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+
+    </bean>
+
+    <bean id="clientRmiTest42" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8097/RedisRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.RedisService"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+
+    <bean id="clientRmiTest52" class="org.springframework.remoting.rmi.RmiProxyFactoryBean" lazy-init="true" scope="prototype">
+        <property name="serviceUrl" value="rmi://192.168.31.176:8098/SMSRmiServiceTest"/>
+        <property name="serviceInterface" value="com.service.SMSservice"/>
+        <property name="lookupStubOnStartup" value="false"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+</beans>

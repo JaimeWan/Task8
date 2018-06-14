@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jaiemwan-service/jaiemwan-service.iml" filepath="$PROJECT_DIR$/jaiemwan-service/jaiemwan-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaimewan-controller/jaimewan-controller.iml" filepath="$PROJECT_DIR$/jaimewan-controller/jaimewan-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/jaimewan-service.iml" filepath="$PROJECT_DIR$/parent/jaimewan-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/task8.iml" filepath="$PROJECT_DIR$/task8.iml" />
+    </modules>
+  </component>
+</project>

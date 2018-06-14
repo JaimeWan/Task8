@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jaiemwan-service" />
+        <module name="jaiemwanservice" />
+        <module name="jaimewan-controller" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jaiemwan-service" target="1.5" />
+      <module name="jaiemwan-service (1)" target="1.5" />
+      <module name="jaiemwanservice" target="1.5" />
+      <module name="jaimewan-controller" target="1.7" />
+      <module name="jaimewan-core" target="1.5" />
+      <module name="jaimewan-service" target="1.5" />
+      <module name="parent" target="1.5" />
+      <module name="task8" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
